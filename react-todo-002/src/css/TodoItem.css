@@ -1,0 +1,43 @@
+div.todoItem {
+  display: flex;
+  gap: 3px;
+}
+
+.todoItem div {
+  padding: 8px;
+}
+
+.todoItem .contentOk {
+  color: #999;
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: line-through;
+  text-decoration: red;
+}
+.todoItem .content {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+}
+
+.todoItem {
+  .delete,
+  .complete {
+    font-size: 20px;
+    font-weight: 800;
+    color: #777;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &:hover .delete,
+  &:hover .complete {
+    opacity: 1;
+  }
+  .delete:hover,
+  .complete:hover {
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 50px;
+  }
+}

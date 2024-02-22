@@ -1,6 +1,7 @@
 import Box from "./Box";
 import "./App.css";
 import View from "./View";
+import Item from "./Item";
 // 함수방식으로 App이라는 컴포넌트 시작(생성)
 const App = () => {
   //react(jsx) 에서는 tag(컴포넌트)에 class를 지정할때
@@ -17,6 +18,7 @@ const App = () => {
       <View name="홍길동" age="33" />
       <View name="이몽룡" age="20" />
       <View name="성춘향" age="16" />
+      <Item name="성춘향" age="16"></Item>
     </div>
   );
 };

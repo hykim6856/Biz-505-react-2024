@@ -7,11 +7,11 @@ const Item = (props) => {
       <h3>{props.name}</h3>
       <h3>{props.age}</h3>
       <div>
-        <p>
-          {props.name}
-          {props.age}
-        </p>
+        {name}
+        {age}
       </div>
     </>
   );
 };
+
+export default Item;
