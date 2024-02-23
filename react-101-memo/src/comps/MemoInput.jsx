@@ -1,26 +1,27 @@
-const MemoList = ({ memo, setMemo, memoInsert }) => {
+const MemoInput = ({ memo, setMemo, memoInsert }) => {
   const onChangeHandler = (e) => {
     const target = e.target;
     const text = target.value;
+    const name = target.name;
     /**
-     * 기존의 memo 객체를 새롭게 복제하고
-     * m_subject 를 index tag입력된 문자열로 대체하여 포함시켜라
+     * 기존의 메모 객체를 새롭게 복제하고
+     * [name]속성에 저장된 문자열을 key로 하여 input tag에 입력된 값을 새로운 객체에 포함하여라
      */
-    setMemo({ ...memo, m_subject: text });
+    setMemo({ ...memo, [name]: text });
   };
 
   const onClickInsert = () => {
     memoInsert();
   };
   return (
-    <>
-      <input type="text" placeholder="메모제목" value={memo.m_subject} onChange={onChangeHandler} />
-      <input type="text" placeholder="메모를 입력하세요" />
+    <div>
+      <input type="text" placeholder="제목" value={memo.m_subject} onChange={onChangeHandler} name="m_subject" />
+      <input type="text" placeholder="메모를 입력하세요" onChange={{ onChangeHandler }} name="m_memo" />
       <input type="file" />
-      <input type="button" value="메모추가" onClick={onClickInsert} />
+      <input type="button" value="추가" onClick={onClickInsert} />
       <input type="hidden" value="삭제" />
-    </>
+      {/* <p>{memo.m_subject}</p> */}
+    </div>
   );
 };
-
-export default MemoList;
+export default MemoInput;

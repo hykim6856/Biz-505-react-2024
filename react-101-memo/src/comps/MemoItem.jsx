@@ -7,9 +7,8 @@ const MemoItem = ({ memo }) => {
         <div>{memo.m_date}</div>
         <div>{memo.m_time}</div>
       </div>
-      <div className={styles.memo}>{memo.m_subject}</div>
+      <div className="memo">{memo.m_subject}</div>
     </div>
   );
 };
-
 export default MemoItem;

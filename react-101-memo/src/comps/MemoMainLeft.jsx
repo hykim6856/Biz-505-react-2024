@@ -1,5 +1,4 @@
-const MemeMainLeft = ({ children }) => {
+const MemoMainLeft = ({ children }) => {
   return <div className="left">{children}</div>;
 };
-
-export default MemeMainLeft;
+export default MemoMainLeft;
