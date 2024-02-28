@@ -1,5 +1,6 @@
 import Link from "next/link";
-const NoticePage = () => {
+// notice/page.js
+export default () => {
   return (
     <div>
       <h1>공지사항 페이지</h1>
@@ -7,4 +8,3 @@ const NoticePage = () => {
     </div>
   );
 };
-export default NoticePage;

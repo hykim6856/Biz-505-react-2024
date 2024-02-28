@@ -12,3 +12,43 @@
 - `React` 에서 사용하는 이러한 구조를 `Client Side Rendering` 이라고 한다.
 
 - `NextJS` 는 `React` 의 부분 렌더링을 지원하고, 여기에 `Server Side Rendering` 을 동시에 지원하는 `Framework`이다. 기본적인 부분은 `React`의 철학을 따르면서 좀 색다른 방법으로 서버와 연동되는 화면을 구현한다.
+
+## NextJS 를 서버처럼 구동하기, DB 와 연동하기
+
+- 순수 `React` 프로젝트에서는 서버, DB, 다른 서버와 연동하기 위해서는 별도의 서버가 필요하다
+- 보통은 `React` front 와 `NodeJS` back-end 를 연동하여 full stack project 를 구현한다.
+- `NextJS`를 사용하면 `Back-end` 서버가 없어도 `React` 프로젝트에 서버를 연동하여 구현 할 수 있다.
+- `NextJS` 프로젝트를 DB(MySQL) 과 연동하기 위해 `Prisma` 라는 도구를 사용한다.
+
+## 프로젝트에 Prisma 와 MySql 연동하기
+
+```bash
+npm install prisma --save-dev
+npm install @prisma/client
+
+npm install @prisma/client prisma --save-dev
+```
+
+## Mysql 연동하기
+
+- 프로젝트에 prisma 환경 설정하기
+
+```bash
+npx prisma init --datasource-provider mysql
+```
+
+- MySQL 연결 URL 설정하기
+- 프로젝트 폴더에 `.env` 파일을 만들거나 이미 있으면 다음 내용을 추가하기
+
+- `DATABASE_URL="mysql://johndoe:randompassword@localhost:3306/mydb"`
+- DB 연결 초기화 하기 :`npx prisma generate`
+
+```bash
+npx prisma generate
+```
+
+- Table 생성하기 :
+
+```bash
+ npx prisma migrate dev --name init
+```
