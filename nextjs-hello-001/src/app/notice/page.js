@@ -1,9 +1,15 @@
 import Link from "next/link";
+import { selectAll } from "../api/notice";
 // notice/page.js
-export default () => {
+export default async () => {
+  const noticeList = await selectAll();
+  const viewList = noticeList.map((item) => {
+    return <li>{item.m_subject}</li>;
+  });
+
   return (
     <div>
-      <h1>공지사항 페이지</h1>
+      <ul>{viewList}</ul>
       <Link href="/notice/input">공지사항작성</Link>
     </div>
   );

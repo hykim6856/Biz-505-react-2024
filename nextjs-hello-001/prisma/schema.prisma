@@ -16,7 +16,8 @@ datasource db {
 model tbl_notice{
   m_seq Int @id @default(autoincrement())
   m_author String
-  m_data String
+  m_flag String
+  m_date String
   m_time String
   m_subject String
   m_content String
