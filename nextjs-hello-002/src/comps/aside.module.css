@@ -1,0 +1,37 @@
+.ul {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.ul a {
+  display: block;
+  width: 80%;
+  /* border: 1px solid red; */
+  padding: 12px 10px 5px 10px;
+  margin: 10px auto;
+  text-align: right;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+.ul a:hover {
+  border-bottom: 3px solid skyblue;
+}
+
+.active {
+  color: blue;
+}
+/* .li {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  color: rebeccapurple;
+  transition: 0.3s;
+  user-select: none;
+  cursor: pointer;
+}
+.li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+ */
