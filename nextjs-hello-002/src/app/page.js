@@ -1,10 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <h1>안녕하세요</h1>
-    </main>
-  );
+  return redirect("/blog");
 }

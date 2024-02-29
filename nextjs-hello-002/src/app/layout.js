@@ -8,7 +8,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <header></header>
+        {children}
+        <footer>
+          <address>CopyRight&copy;hykim6856@gmail.com</address>
+        </footer>
+      </body>
     </html>
   );
 }
