@@ -1,0 +1,38 @@
+section.book.main {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  article.body {
+    display: flex;
+  }
+  aside.list {
+    flex: 1;
+    background-color: #eee;
+
+    ul {
+      list-style-type: none;
+      li {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+div.book.search {
+  padding: 10px;
+  text-align: center;
+  input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    outline: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    &:focus {
+      border: 1px solid gray;
+    }
+    &:hover {
+      background-color: #ddd;
+      cursor: pointer;
+    }
+  }
+}
