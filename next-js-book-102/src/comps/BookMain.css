@@ -1,19 +1,32 @@
-section.book.main {
+.book.body {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 80%;
-  margin: 10px auto;
-  article.body {
-    display: flex;
+  margin: 30px auto;
+  aside {
+    /*화면 폭의 50 %에 해당하는 픽셀값을 계산하여 가로 값으로 설정하기.
+    overflow:hidden 의 설정에서 보여지는 콘텐츠를 제한하기 위한 설정*/
+    width: calc(50%);
+    padding: 1rem;
+    background-color: #efefef;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px #dfdfdf;
+    /* border: 1px solid blue; */
   }
   aside.list {
     flex: 1;
+    flex-direction: column;
+    display: flex;
     padding: 5px;
     background-color: #eee;
     ul {
       list-style: none;
       li {
-        padding: 5px;
+        padding: 8px;
+        /*텍스트(콘텐츠)의 보여지는 모양을 정리*/
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         &:nth-of-type(odd) {
           background-color: #ddd;
         }
@@ -44,6 +57,17 @@ div.book.search {
     &:hover {
       background-color: #ddd;
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .book.main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aside {
+      width: calc(90%);
     }
   }
 }
