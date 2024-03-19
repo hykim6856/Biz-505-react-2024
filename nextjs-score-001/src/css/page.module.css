@@ -1,0 +1,12 @@
+.main {
+  /* display: flex;
+  padding: 2rem; */
+  /* min-height: 100vh; */
+}
+
+.main section {
+  flex: 1;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 1px solid blue;
+}
