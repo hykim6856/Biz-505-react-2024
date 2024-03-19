@@ -1,0 +1,37 @@
+.body {
+  list-style-type: none;
+  display: flex;
+}
+
+.body strong,
+.body span {
+  flex: 1;
+}
+
+.item {
+  width: 50%;
+  margin: 5px auto;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  border-bottom: 1px solid#ddd;
+}
+
+.item:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.item strong,
+.item span {
+  /* display: inline-block; */
+  flex: 1;
+  text-align: left;
+}
+
+.title {
+  background-color: #eee;
+  color: white;
+  font-weight: 900;
+}

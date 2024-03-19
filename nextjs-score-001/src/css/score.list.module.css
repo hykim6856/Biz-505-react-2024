@@ -1,0 +1,27 @@
+.body {
+  list-style: none;
+  width: 80%;
+  margin: 5px auto;
+}
+
+.item {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  padding: 8px;
+}
+
+.item strong {
+  flex: 2;
+  text-align: left;
+}
+.item span {
+  flex: 1;
+  text-align: right;
+}
+.strong {
+  background-color: #eee;
+  /* border-bottom: #bbb; */
+}
+.strong strong {
+  color: blue;
+}
