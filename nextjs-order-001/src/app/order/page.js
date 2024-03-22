@@ -1,6 +1,6 @@
 "use client";
-import css from "@/css/order.module.css";
 import Link from "next/link";
+import css from "@/css/order.module.css";
 import { useEffect, useState } from "react";
 import { selectAll } from "../api/order";
 
@@ -24,9 +24,8 @@ const OrderPage = () => {
 
   return (
     <section className={css.main}>
-      <h1>주문서 시작화면</h1>
-      <ul>{viewList}</ul>
-      <div>
+      <ul className={css.list}>{viewList}</ul>
+      <div className={css.link}>
         <Link href={"/order/insert"}>주문서 추가</Link>
       </div>
     </section>

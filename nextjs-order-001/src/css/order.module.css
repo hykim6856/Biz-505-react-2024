@@ -1,4 +1,66 @@
 .main {
+  height: 100%;
+  width: 80%;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  border: 1px solid gray;
 }
+.list {
+  height: 80%;
+  overflow: auto;
+  width: 80%;
+  margin: 5px auto;
+  background-color: #eee;
+  list-style: none;
+  flex-direction: column;
+}
+
+.list li {
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  margin: 3px auto;
+  width: 50%;
+}
+.list li:hover {
+  background-color: #ddd;
+}
+
+.link {
+  text-align: right;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.link a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: yellowgreen;
+  color: white;
+  border-radius: 10px;
+}
+.link a:hover {
+  opacity: 0.7;
+}
+
+/* .main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rebeccapurple;
+  height: 75vh;
+  width: 90vw;
+}
+
+.list {
+  height: calc(100%);
+  overflow: auto;
+}
+
+.divBox {
+  width: 100%;
+
+  height: 90%;
+  margin: 0 auto;
+  border: 1px solid rebeccapurple;
+} */
