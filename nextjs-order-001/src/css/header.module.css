@@ -1,0 +1,30 @@
+.header {
+  padding: 1.2rem;
+  text-align: center;
+  background-color: greenyellow;
+  color: black;
+  text-shadow: 1px 1px 1px black;
+}
+
+.nav {
+  background-color: black;
+  color: white;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav li {
+  margin: 5px;
+  margin-bottom: 3px;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 8px 11px 5px 12px;
+  color: inherit;
+  border-bottom: 3px solid yellow;
+  transition: 0.3s ease-in-out;
+}
