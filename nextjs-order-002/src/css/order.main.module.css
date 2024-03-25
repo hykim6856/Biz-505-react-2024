@@ -1,0 +1,28 @@
+.main {
+  height: 100%;
+  width: 80%;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid gray;
+}
+.list {
+  height: 80%;
+  overflow: auto;
+  width: 80%;
+  margin: 5px auto;
+  background-color: #eee;
+  list-style: none;
+  flex-direction: column;
+}
+
+.list li {
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  margin: 3px auto;
+  width: 50%;
+}
+.list li:hover {
+  background-color: #ddd;
+}

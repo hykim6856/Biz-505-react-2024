@@ -1,0 +1,85 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid #ccc; */
+  gap: 3px;
+}
+
+.main button {
+  flex: 1;
+  padding: 7px 15px;
+  background-color: #d78b7d;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+  border: 1px solid transparent;
+}
+
+.form input {
+  padding: 8px;
+  margin: 3px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+.form input:focus {
+  border: 1px solid #aaa;
+}
+
+.custom,
+.product {
+  position: relative;
+}
+
+/*
+div. custom box 내부에  ul.cust_list box 를 서로 어울리게 강제 배치를 하려고한다.
+이때, div. custom 에 position:relative 를 설정하고 
+ul.cust_list box 에 position:absolute 를 설정하면
+top, left, right, bottom등의 좌표를 설정하여
+서로 어울리는 레이아웃을 설정할 수 잇다.
+ 만약 div. custom box 에 relative 를 설정하지 않으면
+ absolute Box 는 body, html 을 부모로 인식하고
+ 엉뚱한 곳에 box 를 그려버린다.
+ 모든 block 태그는 position:relative 성질을 갖는다.
+ 하지만 relative box는 아니다.
+ absolute 성질을 사용할때는 반드시 명심해야한다.
+*/
+.customList {
+  list-style: none;
+  background-color: #eee;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.productList {
+  list-style: none;
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  top: 10;
+  right: 0;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.customList li:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+.customList li:hover {
+  background-color: whitesmoke;
+}
+
+.product_list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.products {
+  margin-left: 20px;
+}
